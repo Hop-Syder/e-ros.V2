@@ -1,5 +1,24 @@
+// Fonction pour récupérer les paramètres d'URL
+function getQueryParam(param) {
+    const urlParams = new URLSearchParams(window.location.search);
+    return urlParams.get(param);
+}
 
+// Récupérer l'ID du PDF depuis les paramètres d'URL
+const pdfId = getQueryParam('pdf');
+if (pdfId) {
+    const pdfContainer = document.getElementById('pdf-container');
+    const pdfFrame = document.getElementById('pdf-frame');
 
+    // Construire l'URL du visualiseur Google Drive pour ce fichier PDF
+    const pdfUrl = `https://drive.google.com/file/d/${pdfId}/preview`;
+
+    // Affiche le conteneur PDF et charge le PDF dans l'iframe Google
+    pdfContainer.style.display = 'block';
+    pdfFrame.src = pdfUrl;
+} else {
+    console.error("Aucune URL PDF trouvée dans les paramètres d'URL.");
+}
 
 
 // 4. Fonction pour rechercher un manga par son nom

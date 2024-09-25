@@ -92,9 +92,7 @@
 
     </header>
 
-
     <main class="main">
-
         <div id="pdf-container" style="display: none; margin-top: 20px;">
             <iframe id="pdf-frame" src="" style="width: 100%; height: 100vh; border: none;"></iframe>
         </div>
@@ -116,7 +114,6 @@
                 <p>&copy; 2024 eROS. Tous droits réservés.</p>
             </div>
         </footer>
-
     </main>
 
     <!-- Scroll Top -->
@@ -139,31 +136,6 @@
     <script src="vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
     <script src="vendor/isotope-layout/isotope.pkgd.min.js"></script>
     <script src="vendor/swiper/swiper-bundle.min.js"></script>
-
-
-    <script>
-        // Fonction pour récupérer les paramètres d'URL
-        function getQueryParam(param) {
-            const urlParams = new URLSearchParams(window.location.search);
-            return urlParams.get(param);
-        }
-
-        // Récupérer l'ID du PDF depuis les paramètres d'URL
-        const pdfId = getQueryParam('pdf');
-        if (pdfId) {
-            const pdfContainer = document.getElementById('pdf-container');
-            const pdfFrame = document.getElementById('pdf-frame');
-
-            // Construire l'URL directe pour le lecteur de Google Drive
-            const pdfUrl = `https://drive.google.com/file/d/${pdfId}/preview`;
-
-            // Afficher le conteneur PDF et charger le PDF dans l'iframe
-            pdfContainer.style.display = 'block';
-            pdfFrame.src = pdfUrl;
-        } else {
-            console.error("Aucune URL PDF trouvée dans les paramètres d'URL.");
-        }
-    </script>
 
 
     <!-- Main JS File -->
