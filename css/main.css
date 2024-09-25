@@ -1430,3 +1430,21 @@ section,
     color: #7f8c8d;
     margin-bottom: 10px;
 }
+
+
+
+#pdf-container {
+    width: 100%;
+    /* Occupe toute la largeur disponible */
+    margin: 20px 0;
+    /* Espace autour du conteneur */
+}
+
+#pdf-frame {
+    width: 100%;
+    /* L'iframe occupera toute la largeur du conteneur */
+    height: 100vh;
+    /* S'ajuste à la hauteur de la fenêtre */
+    border: none;
+    /* Pas de bordure autour de l'iframe */
+}
