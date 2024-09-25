@@ -114,7 +114,7 @@
 					<img src="images/Section 69.png" class="card-img-top manga-cover" alt="Section 69">
 					<div class="card-body d-flex flex-column text-center">
 						<p class="card-title flex-grow-1">Section 69</p>
-						<a href="LECTEUR.html" class="btn btn-custom mt-3 pdf-link"
+						<a href="lecteur.html" class="btn btn-custom mt-3 pdf-link"
 							data-pdf-url="https://drive.google.com/file/d/17WGSoRrGpIwnyh21jbD9oNkWG5HFllZH/view?usp=drive_link">Ouvrir</a>
 					</div>
 				</div>
@@ -125,7 +125,7 @@
 					<img src="images/Margarethe.png" class="card-img-top manga-cover" alt="Margarethe">
 					<div class="card-body d-flex flex-column text-center">
 						<p class="card-title flex-grow-1">Margarethe</p>
-						<a href="LECTEUR.html" class="btn btn-custom mt-3 pdf-link"
+						<a href="lecteur.html" class="btn btn-custom mt-3 pdf-link"
 							data-pdf-url="https://drive.google.com/file/d/1ImMUZOMaap-Bl5_E3rQBFU8gtirT6ijf/view?usp=drive_link">Ouvrir</a>
 					</div>
 				</div>
@@ -137,7 +137,7 @@
 						alt="La Bourgeoise et le Nécessiteux">
 					<div class="card-body d-flex flex-column text-center">
 						<p class="card-title flex-grow-1">La Bourgeoise et le Nécessiteux</p>
-						<a href="LECTEUR.html" class="btn btn-custom mt-3 pdf-link"
+						<a href="lecteur.html" class="btn btn-custom mt-3 pdf-link"
 							data-pdf-url="https://drive.google.com/file/d/1hKOaRUAzSwDmJ51CTUI-K-OLy29EIuKY/view?usp=drive_link">Ouvrir</a>
 					</div>
 				</div>
@@ -149,7 +149,7 @@
 						alt="Partageuse de fesses s01">
 					<div class="card-body d-flex flex-column text-center">
 						<p class="card-title flex-grow-1">Partageuse de fesses s01</p>
-						<a href="LECTEUR.html" class="btn btn-custom mt-3 pdf-link"
+						<a href="lecteur.html" class="btn btn-custom mt-3 pdf-link"
 							data-pdf-url="https://drive.google.com/file/d/1aM-fJN92UAJHPRAe6deFiaC63ON454EG/view">Ouvrir</a>
 					</div>
 				</div>
@@ -206,7 +206,7 @@
 					event.preventDefault(); // Empêche l'action par défaut du lien
 					const pdfUrl = this.getAttribute('data-pdf-url'); // Récupère l'URL du PDF
 					const pdfId = pdfUrl.split('/d/')[1].split('/')[0]; // Extraire l'ID du fichier
-					window.location.href = `LECTEUR.html?pdf=${pdfId}`; // Redirige vers lecteur.html avec l'ID du PDF
+					window.location.href = `lecteur.html?pdf=${pdfId}`; // Redirige vers lecteur.html avec l'ID du PDF
 				});
 			});
 		});
