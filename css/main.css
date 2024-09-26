@@ -1485,3 +1485,53 @@ section,
 .aide-item a:hover {
     text-decoration: none;
 }
+
+
+
+
+
+
+
+.image-carousel {
+    overflow: hidden;
+    /* Cache le contenu en dehors du cadre */
+    position: relative;
+    width: 100%;
+    height: 267px;
+    /* Ajustez si besoin */
+    padding: 10px 0;
+}
+
+.image-container {
+    display: flex;
+    animation: scroll 20s linear infinite;
+    height: 100%;
+}
+
+.rectangle {
+    height: 267px;
+    margin-right: 20px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* Styles adaptatifs pour s'assurer que le carrousel fonctionne sur mobile */
+@media (max-width: 768px) {
+    .rectangle {
+        height: 200px;
+    }
+
+    .image-container {
+        animation-duration: 30s;
+    }
+}
