@@ -61,6 +61,61 @@
 
 <body class="index-page">
 
+    <style>
+        /* Modal (pop-up) */
+        .modal {
+            display: none;
+            /* Caché par défaut */
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.5);
+            /* Fond noir transparent */
+            padding-top: 60px;
+        }
+
+        .modal-content {
+            background-color: #fefefe;
+            margin: 5% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 400px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .btn-custom {
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 20px;
+            display: inline-block;
+        }
+
+        .btn-custom:hover {}
+    </style>
+
     <!-- Sidebar -->
     <header id="header" class="header bg-dark d-flex flex-column">
         <i class="header-toggle d-xl-none bi bi-list" style="margin-top: auto; margin-bottom: 20px;"></i>
@@ -88,7 +143,6 @@
         </nav>
 
     </header>
-
 
     <main class="main">
 
@@ -189,8 +243,8 @@
                         class="manga-cover" class="manga-cover" />
                     <div class="manga-info">
                         <div class="manga-title">Section 69 ep 6-11</div>
-                        <a href="lecteur.html" class="btn btn-custom mt-3 pdf-link"
-                            data-pdf-url="https://drive.google.com/file/d/1B-Whx64F62_vUTFsT_P9f0lLd6ttYcNX/view?usp=drive_link">Ouvrir</a>
+                        <a class="btn btn-custom mt-3 pdf-link"
+                            data-pdf-url="https://drive.google.com/file/d/1B-Whx64F62_vUTFsT_P9f0lLd6ttYcNX/view?usp=drive_link">Telecharger</a>
 
                     </div>
                 </div>
@@ -202,24 +256,59 @@
                         class="manga-cover" class="manga-cover" />
                     <div class="manga-info">
                         <div class="manga-title">Section 69 ep 1-5</div>
-                        <a href="lecteur.html" class="btn btn-custom mt-3 pdf-link"
-                            data-pdf-url="https://drive.google.com/file/d/1u6wEzCisMkyR234D6cM7SimV3tc5oOju/view?usp=drive_link">Ouvrir</a>
+                        <a class="btn btn-custom mt-3"
+                            data-pdf-url="https://drive.google.com/file/d/1u6wEzCisMkyR234D6cM7SimV3tc5oOju/view?usp=drive_link">Telecharger</a>
                     </div>
                 </div>
 
-                <!-- 8 -->
+                <!-- Margarethe  1-4 -->
                 <div class="manga-item" data-id="2">
                     <img src="images/Margarethe.png"
                         alt="Couverture de manga: Margarethe, style érotique avec des personnages en tenue légère"
                         class="manga-cover" class="manga-cover" class="manga-cover" />
                     <div class="manga-info">
                         <div class="manga-title">Margarethe <br> 1-4</div>
+                        <a class="btn btn-custom mt-3"
+                            data-pdf-url="https://drive.google.com/file/d/1C1XYvz-wyruIjCHkVy-gNBsEZQlnOig5/view?usp=drive_link">Telecharger</a>
+                    </div>
+                </div>
+
+                <!-- Smooth ep 1 -->
+                <div class="manga-item" data-id="2">
+                    <img src="images/smooth .jpg"
+                        alt="Couverture de manga: Margarethe, style érotique avec des personnages en tenue légère"
+                        class="manga-cover" class="manga-cover" class="manga-cover" />
+                    <div class="manga-info">
+                        <div class="manga-title">Smooth <br>ep 1</div>
                         <a href="lecteur.html" class="btn btn-custom mt-3 pdf-link"
-                            data-pdf-url="https://drive.google.com/file/d/1C1XYvz-wyruIjCHkVy-gNBsEZQlnOig5/view?usp=drive_link">Ouvrir</a>
+                            data-pdf-url="https://drive.google.com/file/d/1JxielFqrorcR3Rq2zHoVNTdtVENcVBsW/view?usp=drive_link">Ouvrir</a>
+                    </div>
+                </div>
+
+                <!-- Ma brute ep 1 -->
+                <div class="manga-item" data-id="2">
+                    <img src="images/ma brute.jpg"
+                        alt="Couverture de manga: Margarethe, style érotique avec des personnages en tenue légère"
+                        class="manga-cover" class="manga-cover" class="manga-cover" />
+                    <div class="manga-info">
+                        <div class="manga-title">Ma brute <br>ep 1</div>
+                        <a href="lecteur.html" class="btn btn-custom mt-3 pdf-link"
+                            data-pdf-url="https://drive.google.com/file/d/1s48PhN_Mdght1cOVzVjLPJjn1foRsrk8/view?usp=drive_link">Ouvrir</a>
                     </div>
                 </div>
 
 
+                <!-- Cohabitation forcée ep 1 -->
+                <div class="manga-item" data-id="2">
+                    <img src="images/Cohabitation forcée.jpg"
+                        alt="Couverture de manga: Margarethe, style érotique avec des personnages en tenue légère"
+                        class="manga-cover" class="manga-cover" class="manga-cover" />
+                    <div class="manga-info">
+                        <div class="manga-title">Cohabitation forcée ep 1</div>
+                        <a href="lecteur.html" class="btn btn-custom mt-3 pdf-link"
+                            data-pdf-url="https://drive.google.com/file/d/1akPepbvUrpuFIY9NdQRxFBp1xtFktmvV/view?usp=drive_link">Ouvrir</a>
+                    </div>
+                </div>
 
 
             </div>
@@ -246,6 +335,49 @@
     </main>
 
 
+    <!-- Pop-up pour la souscription -->
+    <div id="subscriptionModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Souscription requise</h2>
+            <p>Pour télécharger ce contenu, vous devez souscrire à l'un de nos abonnements. Cliquez sur le bouton
+                ci-dessous pour voir nos offres d'abonnement.</p>
+
+            <a href="tarif.html" class="btn btn-custom">Voir les abonnements</a>
+        </div>
+    </div>
+
+    <script>
+        // Obtenir le modal (pop-up)
+        const modal = document.getElementById('subscriptionModal');
+        const closeBtn = document.querySelector('.close');
+
+        // Ajouter un écouteur d'événement sur tous les boutons "Télécharger"
+        document.querySelectorAll('.pdf-link').forEach(link => {
+            link.addEventListener('click', function (e) {
+                e.preventDefault(); // Empêche le comportement par défaut du lien
+                modal.style.display = 'block'; // Affiche le pop-up
+            });
+        });
+
+        // Fermer le modal lorsque l'utilisateur clique sur le bouton de fermeture (X)
+        closeBtn.onclick = function () {
+            modal.style.display = 'none';
+        }
+
+        // Fermer le modal si l'utilisateur clique en dehors de celui-ci
+        window.onclick = function (event) {
+            if (event.target === modal) {
+                modal.style.display = 'none';
+            }
+        }
+    </script>
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+
+
     <!-- Scroll Top -->
     <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
             class="bi bi-arrow-up-short"></i></a>
@@ -268,20 +400,6 @@
     <script src="vendor/swiper/swiper-bundle.min.js"></script>
 
 
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-
-            document.querySelectorAll('.pdf-link').forEach(button => {
-                button.addEventListener('click', function (event) {
-                    event.preventDefault(); // Empêche l'action par défaut du lien
-                    const pdfUrl = this.getAttribute('data-pdf-url'); // Récupère l'URL du PDF
-                    const pdfId = pdfUrl.split('/d/')[1].split('/')[0]; // Extraire l'ID du fichier
-                    window.location.href = `lecteur.html?pdf=${pdfId}`; // Redirige vers lecteur.html avec l'ID du PDF
-                });
-            });
-        });
-
-    </script>
 
     <!-- Main JS File -->
     <script src="js/utils.js"></script>
