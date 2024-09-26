@@ -1448,3 +1448,40 @@ section,
     border: none;
     /* Pas de bordure autour de l'iframe */
 }
+
+
+.aide-section {
+    padding: 30px;
+    margin-top: 40px;
+    border-radius: 8px;
+}
+
+.aide-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.aide-item {
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(180, 0, 99, 0.1);
+}
+
+.aide-item h3 {
+    margin-bottom: 10px;
+    color: #007bff;
+}
+
+.aide-item p {
+    margin-bottom: 0;
+}
+
+.aide-item a {
+    color: #007bff;
+    text-decoration: underline;
+}
+
+.aide-item a:hover {
+    text-decoration: none;
+}
