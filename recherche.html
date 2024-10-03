@@ -253,7 +253,7 @@
                         class="manga-cover" class="manga-cover" />
                     <div class="manga-info">
                         <div class="manga-title">Section 69 ep 6-11</div>
-                        <a class="btn btn-custom mt-3 pdf-link"
+                        <a class="btn btn-custom mt-3 pdf-sub"
                             data-pdf-url="https://drive.google.com/file/d/1B-Whx64F62_vUTFsT_P9f0lLd6ttYcNX/view?usp=drive_link">Telecharger</a>
 
                     </div>
@@ -266,7 +266,7 @@
                         class="manga-cover" class="manga-cover" />
                     <div class="manga-info">
                         <div class="manga-title">Section 69 ep 1-5</div>
-                        <a class="btn btn-custom mt-3"
+                        <a class="btn btn-custom mt-3 pdf-sub"
                             data-pdf-url="https://drive.google.com/file/d/1u6wEzCisMkyR234D6cM7SimV3tc5oOju/view?usp=drive_link">Telecharger</a>
                     </div>
                 </div>
@@ -278,7 +278,7 @@
                         class="manga-cover" class="manga-cover" class="manga-cover" />
                     <div class="manga-info">
                         <div class="manga-title">Margarethe <br> 1-4</div>
-                        <a class="btn btn-custom mt-3"
+                        <a class="btn btn-custom mt-3 pdf-sub"
                             data-pdf-url="https://drive.google.com/file/d/1C1XYvz-wyruIjCHkVy-gNBsEZQlnOig5/view?usp=drive_link">Telecharger</a>
                     </div>
                 </div>
@@ -306,7 +306,6 @@
                             data-pdf-url="https://drive.google.com/file/d/1s48PhN_Mdght1cOVzVjLPJjn1foRsrk8/view?usp=drive_link">Ouvrir</a>
                     </div>
                 </div>
-
 
                 <!-- Cohabitation forcée ep 1 -->
                 <div class="manga-item" data-id="2">
@@ -363,7 +362,7 @@
         const closeBtn = document.querySelector('.close');
 
         // Ajouter un écouteur d'événement sur tous les boutons "Télécharger"
-        document.querySelectorAll('.pdf-link').forEach(link => {
+        document.querySelectorAll('.pdf-sub').forEach(link => {
             link.addEventListener('click', function (e) {
                 e.preventDefault(); // Empêche le comportement par défaut du lien
                 modal.style.display = 'block'; // Affiche le pop-up
@@ -381,6 +380,21 @@
                 modal.style.display = 'none';
             }
         }
+    </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+
+            document.querySelectorAll('.pdf-link').forEach(button => {
+                button.addEventListener('click', function (event) {
+                    event.preventDefault(); // Empêche l'action par défaut du lien
+                    const pdfUrl = this.getAttribute('data-pdf-url'); // Récupère l'URL du PDF
+                    const pdfId = pdfUrl.split('/d/')[1].split('/')[0]; // Extraire l'ID du fichier
+                    window.location.href = `lecteur.html?pdf=${pdfId}`; // Redirige vers lecteur.html avec l'ID du PDF
+                });
+            });
+        });
+
     </script>
 
 

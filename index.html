@@ -116,7 +116,6 @@
         <!-- /Hero Section -->
 
         <!-- Nouveautés -->
-
         <div>
             <h2 class="text-center mb-4">Nouveautés</h2>
         </div>
@@ -183,6 +182,167 @@
             </div>-->
             <!-- Espaces Publicitaire -->
         </section>
+
+        <style>
+            /* Conteneur principal de la galerie d'images */
+            .fond-gallery {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                gap: 15px;
+                justify-content: center;
+                padding: 0 20px;
+            }
+
+            /* Conteneurs individuels pour chaque image */
+            .fond-image-container {
+                width: 150px;
+                height: 267px;
+                overflow: hidden;
+                border-radius: 8px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                position: relative;
+                background: #e0e0e0;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            /* Imposer la taille des images */
+            .fond-image-container img {
+                width: 100%;
+                height: 200px;
+                /* Limiter la hauteur de l'image */
+                object-fit: cover;
+                transition: transform 0.3s ease;
+            }
+
+            /* Effet de zoom au survol */
+            .fond-image-container img:hover {
+                transform: scale(1.1);
+            }
+
+            /* Style des boutons de téléchargement */
+            .download-btn {
+                margin-top: 10px;
+                padding: 8px 12px;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+                font-size: 14px;
+                text-decoration: none;
+                transition: background-color 0.3s ease;
+            }
+
+            .download-btn:hover {
+                background-color: #ff3377;
+            }
+        </style>
+
+        <!-- Section Fond d'écran -->
+        <section class="fond-section" id="fond-ecran">
+            <h2 class="text-center mb-4">Fond d'écran</h2>
+            <div class="fond-gallery" id="fondGallery">
+                <!-- Les images seront affichées ici -->
+            </div>
+        </section>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                // Liste d'images dans le dossier "fond"
+                const fondImageList = [
+                    "fond/1.png",
+                    "fond/2.png",
+                    "fond/3.png",
+                    "fond/4.png",
+                    "fond/5.png",
+                    "fond/6.png",
+                    "fond/7.png",
+                    "fond/8.png",
+                    "fond/9.png",
+                    "fond/10.png",
+                    "fond/11.png",
+                    "fond/12.png",
+                    "fond/13.png",
+                    "fond/14.png",
+                    "fond/15.png",
+                    "fond/16.png",
+                    "fond/17.png",
+                    "fond/18.png",
+                    "fond/19.png",
+                    "fond/20.png",
+                    "fond/21.png",
+                    "fond/22.png",
+                    "fond/23.png",
+                    "fond/24.png",
+                    "fond/25.png",
+                    "fond/26.png",
+                    "fond/27.png",
+                    "fond/28.png",
+                    "fond/29.png",
+                    "fond/30.png",
+                    "fond/31.png",
+                    "fond/32.png",
+                    "fond/33.png",
+                    "fond/34.png",
+                    "fond/35.png",
+                    "fond/36.png",
+                    "fond/37.png",
+                    "fond/38.png",
+                    "fond/39.png",
+                    "fond/40.png",
+                    "fond/41.png",
+                    "fond/42.png",
+                    "fond/43.png",
+                    "fond/44.png",
+                    "fond/45.png",
+                    "fond/46.png",
+                    "fond/47.png",
+                    "fond/48.png",
+                    "fond/49.png",
+                    "fond/50.png",
+                    "fond/51.png",
+                    "fond/52.png",
+                    "fond/53.png",
+                    "fond/54.png",
+                    "fond/55.png",
+                    "fond/56.png",
+                    "fond/57.png",
+                    "fond/58.png",
+                    "fond/59.png",
+                    "fond/60.png",
+                    "fond/61.png"
+
+                ];
+
+                const fondGallery = document.getElementById("fondGallery");
+
+                // Ajout dynamique des images à la galerie avec un conteneur et bouton de téléchargement pour chaque image
+                fondImageList.forEach(imagePath => {
+                    // Conteneur de l'image et du bouton
+                    const fondContainer = document.createElement("div");
+                    fondContainer.className = "fond-image-container";
+
+                    // Élément d'image
+                    const fondImgElement = document.createElement("img");
+                    fondImgElement.src = imagePath;
+                    fondImgElement.alt = "Fond d'écran";
+
+                    // Bouton de téléchargement
+                    const downloadButton = document.createElement("a");
+                    downloadButton.href = imagePath;  // Lien vers l'image
+                    downloadButton.download = imagePath.split('/').pop();  // Nom du fichier à télécharger
+                    downloadButton.className = "download-btn";
+                    downloadButton.textContent = "Download";
+
+                    // Ajout de l'image et du bouton dans le conteneur
+                    fondContainer.appendChild(fondImgElement);
+                    fondContainer.appendChild(downloadButton);
+
+                    // Ajout du conteneur complet à la galerie
+                    fondGallery.appendChild(fondContainer);
+                });
+            });
+        </script>
 
         <!-- pieds de page -->
         <footer>
