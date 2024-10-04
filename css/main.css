@@ -1391,20 +1391,22 @@ section,
 }
 
 
-
-
 .manga-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    /* Par défaut, 1 à plusieurs colonnes selon la largeur */
+    gap: 15px;
+    /* Espacement entre les éléments */
+    justify-content: center;
+    padding: 20px;
 }
 
 .manga-item {
-    background-color: #ecf0f1;
+    background-color: #1a1a1d;
     border-radius: 8px;
-    margin: 15px;
     padding: 15px;
-    max-width: 200px;
+    max-width: 100%;
+    /* S'adapte à la largeur de chaque colonne */
     text-align: center;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s, box-shadow 0.3s;
@@ -1426,10 +1428,15 @@ section,
     margin-bottom: 5px;
 }
 
-.manga-author {
-    color: #7f8c8d;
-    margin-bottom: 10px;
+/* Adaptation pour écrans de petite taille (smartphones) */
+@media (max-width: 600px) {
+    .manga-grid {
+        grid-template-columns: repeat(2, 1fr);
+        /* 2 colonnes fixes sur les petits écrans */
+    }
 }
+
+
 
 
 
@@ -1533,5 +1540,63 @@ section,
 
     .image-container {
         animation-duration: 30s;
+    }
+}
+
+
+
+
+/* Conteneur de la section */
+.erotiques-section {
+    margin: 50px 0;
+    padding: 20px;
+}
+
+/* Conteneur pour chaque texte et image */
+.content-pair {
+    display: flex;
+    align-items: center;
+    margin: 30px 0;
+}
+
+/* Style pour le texte */
+.content-text {
+    flex: 1;
+    padding: 20px;
+    font-size: 18px;
+    color: #333;
+}
+
+/* Style pour l'image */
+.content-image {
+    flex: 1;
+    padding: 20px;
+}
+
+.content-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+}
+
+/* Pour alterner le sens des éléments (Texte à gauche, Image à droite) */
+.image-left .content-image {
+    order: -1;
+    /* Affiche l'image à gauche */
+}
+
+@media (max-width: 768px) {
+
+    /* Adaptation mobile */
+    .content-pair {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .content-image {
+        order: 0;
+        /* Réinitialiser l'ordre sur mobile */
     }
 }
