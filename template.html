@@ -109,78 +109,78 @@
             <section id="heros" class="heros section dark-background ">
                 <img src="images/img.jpg" alt="" data-aos="fade-in">
                 <div class="container hero-text" data-aos="fade-up" data-aos-delay="100" style="text-align: center;">
-                    <h1 style="font-family: 'Dancing Script', cursive; font-weight: bold;">e-ROS | Tarifs </h1>
+                    <h1 style="font-family: 'Dancing Script', cursive; font-weight: bold;">e-ROS | Template </h1>
                 </div>
             </section>
             <!-- /Hero Section -->
 
-            <div class="container py-5">
-                <h1 class="text-center mb-5">Plans d'Abonnement Mensuel</h1>
+            <style>
+                /* Conteneur principal de la galerie d'images */
+                .fond-gallery {
+                    display: grid;
+                    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                    gap: 15px;
+                    justify-content: center;
+                    padding: 0 20px;
+                }
 
-                <div class="row justify-content-center">
-                    <div class="col-md-4 mb-4">
-                        <div class="card h-100 shadow">
-                            <div class="card-body text-center">
-                                <h5 class="card-title">Abonnement Mensuel</h5>
-                                <p class="card-text"><span class="display-1">2,000</span> FCFA</p>
-                                <p class="card-text">Accès à tous nos livres 📚</p>
-                                <a href="#" class="btn btn-primary">Souscrire</a>
-                            </div>
-                        </div>
-                    </div>
+                /* Conteneurs individuels pour chaque image */
+                .fond-image-container {
+                    width: 150px;
+                    height: 267px;
+                    overflow: hidden;
+                    border-radius: 8px;
+                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                    position: relative;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                }
 
-                    <div class="col-md-4 mb-4">
-                        <div class="card h-100 shadow">
-                            <div class="card-body text-center">
-                                <h5 class="card-title">Abonnement Trimestriel</h5>
-                                <p class="card-text"><span class="display-1">5,000</span> FCFA</p>
-                                <p class="card-text">Accès à tous nos livres 📚</p>
-                                <a href="#" class="btn btn-primary">Souscrire</a>
-                            </div>
-                        </div>
-                    </div>
+                /* Imposer la taille des images */
+                .fond-image-container img {
+                    width: 100%;
+                    height: 200px;
+                    /* Limiter la hauteur de l'image */
+                    object-fit: cover;
+                    transition: transform 0.3s ease;
+                }
+
+                /* Effet de zoom au survol */
+                .fond-image-container img:hover {
+                    transform: scale(1.1);
+                }
+
+                /* Style des boutons de téléchargement */
+                .download-btn {
+                    margin-top: 10px;
+                    padding: 8px 12px;
+                    border: none;
+                    border-radius: 4px;
+                    cursor: pointer;
+                    font-size: 14px;
+                    text-decoration: none;
+                    transition: background-color 0.3s ease;
+                }
+
+                .download-btn:hover {
+                    background-color: #ff3377;
+                }
+
+                @media (max-width: 600px) {
+                    .fond-gallery {
+                        grid-template-columns: repeat(2, 1fr);
+                        /* 2 images par ligne sur les petits écrans */
+                    }
+                }
+            </style>
+            <!-- Section Fond d'écran -->
+            <section class="fond-section" id="fond-ecran">
+                <h2 class="text-center mb-4">Fond d'écran</h2>
+                <div class="fond-gallery" id="fondGallery">
+                    <!-- Les images seront affichées ici -->
                 </div>
-
-                <div class="aide-section">
-                    <h1 class="text-center mb-4">Besoin d'Aide ?</h1>
-                    <div class="aide-container">
-                        <div class="aide-item">
-                            <h3>Comment consulter les mangas ?</h3>
-                            <p>Pour consulter un manga, il suffit de cliquer sur ouvrir. Vous serez redirigé vers une
-                                page dédiée où vous pourrez lire ou télécharger le fichier PDF. Patientez pendant 30s
-                                afin le fichier Pdf se charge en arriere plan.</p>
-                        </div>
-
-                        <div class="aide-item">
-                            <h3>Comment télécharger un manga ?</h3>
-                            <p>Contactez-nous afin de vous envoyez les fichier pdf choisir en haut qualite</p>
-                        </div>
-
-                        <div class="aide-item">
-                            <h3>Problèmes de lecture de PDF ?</h3>
-                            <p>Si vous rencontrez des problèmes pour ouvrir ou lire un fichier PDF, assurez-vous d'avoir
-                                une bonne connection internet ou patientez que le chargement. Si vous avez un fichier
-                                pdf provenant de e-ros, utilisez le mot passe pour deverrouilez le fichier. Assurez-vous
-                                d'avoir un lecteur PDF installé, comme<a href="https://get.adobe.com/fr/reader/"
-                                    target="_blank">Adobe Acrobat Reader</a>.
-                            </p>
-                        </div>
-
-                        <div class="aide-item">
-                            <h3>Comment rechercher un manga ?</h3>
-                            <p>Utilisez la barre de recherche en haut de la page pour rechercher un manga en entrant le
-                                nom du titre ou le genre. Vous obtiendrez une liste de résultats correspondants.</p>
-                        </div>
-
-                        <div class="aide-item">
-                            <h3>Contactez-nous</h3>
-                            <p>Si vous avez des questions supplémentaires ou des suggestions, n'hésitez pas à nous <a
-                                    href="mailto:admin@e-ros.xyz">contacter</a>. Nous vous répondrons dès que
-                                possible.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            </section>
 
             <!-- pieds de page -->
             <footer>

@@ -92,6 +92,7 @@
                 <li><a href="#nouveautes"><i class="bi bi-person navicon"></i>Nouveautés</a></li>
                 <li><a href="classique.html"><i class="bi bi-file-earmark-text navicon"></i>Classiques</a></li>
                 <li><a href="erotique.html"><i class="bi bi-envelope navicon"></i>Erotiques</a></li>
+                <li><a href="template.html"><i class="bi bi-images navicon"></i>Template</a></li>
                 <li><a href="recherche.html"><i class="bi bi-images navicon"></i>Recherche</a></li>
                 <li><a href="tarif.html"><i class="bi bi-images navicon"></i>Tarifs</a></li>
             </ul>
@@ -269,74 +270,6 @@
                 </div>
             </div>-->
             <!-- Espaces Publicitaire -->
-        </section>
-
-        <style>
-            /* Conteneur principal de la galerie d'images */
-            .fond-gallery {
-                display: grid;
-                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-                gap: 15px;
-                justify-content: center;
-                padding: 0 20px;
-            }
-
-            /* Conteneurs individuels pour chaque image */
-            .fond-image-container {
-                width: 150px;
-                height: 267px;
-                overflow: hidden;
-                border-radius: 8px;
-                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-                position: relative;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-            }
-
-            /* Imposer la taille des images */
-            .fond-image-container img {
-                width: 100%;
-                height: 200px;
-                /* Limiter la hauteur de l'image */
-                object-fit: cover;
-                transition: transform 0.3s ease;
-            }
-
-            /* Effet de zoom au survol */
-            .fond-image-container img:hover {
-                transform: scale(1.1);
-            }
-
-            /* Style des boutons de téléchargement */
-            .download-btn {
-                margin-top: 10px;
-                padding: 8px 12px;
-                border: none;
-                border-radius: 4px;
-                cursor: pointer;
-                font-size: 14px;
-                text-decoration: none;
-                transition: background-color 0.3s ease;
-            }
-
-            .download-btn:hover {
-                background-color: #ff3377;
-            }
-
-            @media (max-width: 600px) {
-                .fond-gallery {
-                    grid-template-columns: repeat(2, 1fr);
-                    /* 2 images par ligne sur les petits écrans */
-                }
-            }
-        </style>
-        <!-- Section Fond d'écran -->
-        <section class="fond-section" id="fond-ecran">
-            <h2 class="text-center mb-4">Fond d'écran</h2>
-            <div class="fond-gallery" id="fondGallery">
-                <!-- Les images seront affichées ici -->
-            </div>
         </section>
 
         <!-- pieds de page -->
